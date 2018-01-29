@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Theme Template for Bootstrap</title>
+    <title>Specialities Portal</title>
     <link href="stylesheets/styles.css" rel="stylesheet">
 
   </head>
@@ -16,10 +16,16 @@
   <body>
 
     <div class="container">
-
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="mobile-only twitter-plugin">
+                    <p>Plugin for twitter banner 320x100</p>
+                </div>
+            </div>
+        </div>
 <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron top-banner">
-          <br>
+      <div class="jumbotron top-banner desktop-only">
+        <br>
         <h1>Banners: 728x90 or 970x250</h1>
       </div>
 
@@ -30,7 +36,7 @@
     <div class="row">
 
         <div class="col-sm-12 col-md-9">
-        <h1>Speciality type</h1>
+            <h1>Speciality type</h1>
         </div>
 
         <div class="col-sm-12 col-md-3">
@@ -44,51 +50,108 @@
         </div>
 
     </div>
-</div>
+</div> <!-- end of container class -->
 
-<!-- Carousel
+<!-- CAROUSEL FULL WIDTH
 ================================================== -->
-      <main role="main">
+
+    <script>// Instantiate the Bootstrap carousel
+            $('.multi-item-carousel').carousel({
+            interval: false
+            });
+            
+            // for every slide in carousel, copy the next slide's item in the slide.
+            // Do the same for the next, next item.
+            $('.multi-item-carousel .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+            
+            if (next.next().length>0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+            } else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
+            });
+    </script>
+
+<main role="main">
         <div class="album text-muted">
           <div class="container">
             <div class="row carousel">
-                <span class="glyphicon-chevron-right"></span>
-              <div class="col-sm-3 col-xs-6">
-                <div class="card containers">
-                        <div class="image-placeholder">Image</div>
-                        <h3>Title Title</h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="card containers">
-                        <div class="image-placeholder">Image</div>
-                        <h3>Title Title</h3>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="card containers">
-                        <h3>Title Title</h3>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="image-placeholder">Image</div>
-                </div>
-              </div>
-              <div class="col-sm-3 col-xs-6">
-                <div class="card containers">
-                        <h3>Title Title</h3>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="image-placeholder">Image</div>
-                </div>
-              </div>
-              <div class="glyphicon-chevron-left"></div>
 
-            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="carousel slide multi-item-carousel" id="theCarousel">
+                            <div class="carousel-inner">
+
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-4 col-xs-12">
+                                            <div class="card containers">
+                                                <div class="image-placeholder">Image</div>
+                                                <h3>Title Title</h3>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>                                    
+                                    </div>
+                                    <div class="col-sm-4 col-xs-12">
+                                            <div class="card containers">
+                                                <div class="image-placeholder">Image</div>
+                                                <h3>Title Title</h3>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>                                    
+                                    </div>
+                                    <div class="col-sm-4 col-xs-12">
+                                            <div class="card containers">
+                                                <div class="image-placeholder">Image</div>
+                                                <h3>Title Title</h3>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-12">
+                                                <div class="card containers">
+                                                    <div class="image-placeholder">Image</div>
+                                                    <h3>Title Title</h3>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>                                    
+                                        </div>
+                                        <div class="col-sm-4 col-xs-12">
+                                                <div class="card containers">
+                                                    <div class="image-placeholder">Image</div>
+                                                    <h3>Title Title</h3>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>                                    
+                                        </div>
+                                        <div class="col-sm-4 col-xs-12">
+                                                <div class="card containers">
+                                                    <div class="image-placeholder">Image</div>
+                                                    <h3>Title Title</h3>
+                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                </div>                                    
+                                        </div>
+                                    </div>
+                            </div>
+                
+                            </div>
+                            <a href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                            <a href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div><!-- row carousel ends -->
           </div>
-        </div>
+        </div><!-- album div ends -->
       </main>
-
-
 
 <div class="container">
 
@@ -99,7 +162,6 @@
 <!-- SECOND BANNER
 ================================================== -->    
 <div class="sponsor-banner">
-        <div class="container">
           <div class="row">
             <div class="col-md-10">
               <p>Sponsor info here - example: This cardiology portal bought to you by an educational grant from xx</p>
@@ -108,10 +170,9 @@
                     <div class="right-float"><p>Sponsor logo</p></div>
             </div>
           </div>
-        </div>
       </div>
 
-       <div class="col-sm-4">
+       <div class="col-sm-5">
 
           <div class="row">
               <div class="col-sm-12 article-feed-container containers">
@@ -128,28 +189,11 @@
                   </div>
               </div>
           </div>
-          <div class="row">
-              <div class="col-sm-12 article-video-container containers">
-                  <h2>Video</h2>
-                  <div class="content">
-                  <iframe width="300" height="215" src="https://www.youtube.com/embed/oFGcdmkj5nM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-12 article-twitter-container containers">
-                  <h2>Twitter</h2>
-                    <div class="content">
-                     <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Patients’ unfavourable views of hospital care strongly linked to nurse numbers, say research published in <a href="https://twitter.com/BMJ_Open?ref_src=twsrc%5Etfw">@BMJ_Open</a> <a href="https://t.co/bGxr8sql3q">https://t.co/bGxr8sql3q</a> <a href="https://twitter.com/hashtag/nurse?src=hash&amp;ref_src=twsrc%5Etfw">#nurse</a> <a href="https://twitter.com/hashtag/hospital?src=hash&amp;ref_src=twsrc%5Etfw">#hospital</a> <a href="https://twitter.com/hashtag/healthcare?src=hash&amp;ref_src=twsrc%5Etfw">#healthcare</a> <a href="https://t.co/rkQUl5ZprH">pic.twitter.com/rkQUl5ZprH</a></p>&mdash; BMJ (@bmj_company) <a href="https://twitter.com/bmj_company/status/951598377678106625?ref_src=twsrc%5Etfw">January 11, 2018</a></blockquote>
-                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-              </div>
-          </div>
-      </div>  
-
-        <div class="col-sm-4">
-
-          <div class="row">
+<!-- ========================================================
+    MOBILE ONLY MOVED THE BELOW BLOCKS FOR STACKING ORDER
+    =========================================================
+-->
+          <div class="row mobile-only">
               <div class="col-sm-12 article-feed-container containers">
                   <h2>Article Feed: Clinical</h2>
                   <div class="content">
@@ -166,16 +210,156 @@
                   </div>
               </div>
           </div>
-          <div class="row">
+
+        <div class="row mobile-only">
+            <div class="col-sm-12 mpu-banner sidebar">
+                <div class="image-placeholder">Image</div>
+            </div>
+        </div>
+
+        <div class="row mobile-only">
+            <div class="col-lg-12 updates containers sidebar">
+                <form class="form-signin">
+                <h2 class="form-signin-heading">Get the latest updates, etc</h2>
+                <label for="inputEmail" class="sr-only">Enter your name</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Enter your name" required autofocus>
+                <label for="inputPassword" class="sr-only">Enter your email</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Enter your email" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="row mobile-only">
+            <div class="col-lg-12 search sidebar">
+              <form name="searchForm" action="/search" method="get" class="">
+                <fieldset>
+                  <div class="search-contain">
+                    <input id="search" type="text" name="q" placeholder="Search" required="">
+                    <button id="headerSearchButton" type="submit"><span class="icon-search"></span></button>
+                  </div>
+                </fieldset> 
+              </form>
+            </div>
+          </div>
+          <div class="row mobile-only">
+              <div class="col-sm-12 containers cardiology sidebar">
+                  <h2>Diabetics Jobs</h2>
+                  <div class="content">
+                     <p>Careers widget for Cardeology</p>
+                    </div>
+              </div>
+          </div>
+          <div class="row mobile-only">
+              <div class="col-sm-12 article-twitter-container containers">
+                  <h2>Other content recommended for you:</h2>
+                  <div class="content">
+                    <p>Content from TredMD</p>
+                </div>
+              </div>
+          </div>
+          <div class="row mobile-only">
+              <div class="col-sm-12 article-video-container containers">
+                  <h2>Video</h2>
+                  <div class="content">
+                  <iframe width="268" height="215" src="https://www.youtube.com/embed/oFGcdmkj5nM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+          </div>
+          <div class="row mobile-only">
               <div class="col-sm-12 article-video-container containers">
                   <h2>Podcast</h2>
                   <div class="content">
-                      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383394461&amp;color=ff6600&amp;show_user=false"></iframe>
-                   <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/4010213&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-              </div>
+                        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/340703718&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                    </div>
                 </div>
           </div>
-          <div class="row">
+          <div class="row mobile-only">
+              <div class="col-sm-12 article-twitter-container containers">
+                  <h2>Twitter</h2>
+                    <div class="content">
+                            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Simple breathing training with a physiotherapist before surgery prevents postoperative pneumonia, say experts in <a href="https://twitter.com/bmj_latest?ref_src=twsrc%5Etfw">@bmj_latest</a> <a href="https://t.co/z4VzNoIHnw">https://t.co/z4VzNoIHnw</a> <a href="https://twitter.com/hashtag/breathing?src=hash&amp;ref_src=twsrc%5Etfw">#breathing</a> <a href="https://twitter.com/hashtag/health?src=hash&amp;ref_src=twsrc%5Etfw">#health</a> <a href="https://twitter.com/hashtag/pneumonia?src=hash&amp;ref_src=twsrc%5Etfw">#pneumonia</a> <a href="https://twitter.com/hashtag/surgery?src=hash&amp;ref_src=twsrc%5Etfw">#surgery</a> <a href="https://t.co/BXz4Ubrqtx">pic.twitter.com/BXz4Ubrqtx</a></p>&mdash; BMJ (@bmj_company) <a href="https://twitter.com/bmj_company/status/956308222071230464?ref_src=twsrc%5Etfw">January 24, 2018</a></blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Substantial inequalities in caesarean births persist in many countries, finds a study published in <a href="https://twitter.com/bmj_latest?ref_src=twsrc%5Etfw">@bmj_latest</a>    <a href="https://t.co/HFXr11qzFo">https://t.co/HFXr11qzFo</a>  <a href="https://twitter.com/hashtag/caesarean?src=hash&amp;ref_src=twsrc%5Etfw">#caesarean</a> <a href="https://twitter.com/hashtag/birth?src=hash&amp;ref_src=twsrc%5Etfw">#birth</a> <a href="https://twitter.com/hashtag/pregnancy?src=hash&amp;ref_src=twsrc%5Etfw">#pregnancy</a> <a href="https://t.co/iiVtQio5vJ">pic.twitter.com/iiVtQio5vJ</a></p>&mdash; BMJ (@bmj_company) <a href="https://twitter.com/bmj_company/status/956308223237206016?ref_src=twsrc%5Etfw">January 24, 2018</a></blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                    </div>
+              </div>
+          </div>
+          
+          <div class="row mobile-only">
+                <div class="col-sm-12 containers marketing sidebar">
+                    <h2>Marketing Area</h2>
+                    <div class="content">
+                      <p>Business needs to be able to enter the title and text</p>
+                      </div>
+                </div>
+          </div>
+
+          <div class="row mobile-only">
+            <div class="col-lg-12">
+              <div class="jumbotron bottom-banner">
+                  <h2>MPU</h2>
+              </div>
+            </div>
+          </div>
+
+<!-- ========================================================
+    MOBILE ONLY MOVED THE ABOVE BLOCKS FOR STACKING ORDER
+    =========================================================
+-->
+          <div class="row desktop-only">
+              <div class="col-sm-12 article-video-container containers">
+                  <h2>Video</h2>
+                  <div class="content">
+                  <iframe width="268" height="215" src="https://www.youtube.com/embed/oFGcdmkj5nM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+          </div>
+          <div class="row desktop-only">
+              <div class="col-sm-12 article-twitter-container containers">
+                  <h2>Twitter</h2>
+                    <div class="content">
+                            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Simple breathing training with a physiotherapist before surgery prevents postoperative pneumonia, say experts in <a href="https://twitter.com/bmj_latest?ref_src=twsrc%5Etfw">@bmj_latest</a> <a href="https://t.co/z4VzNoIHnw">https://t.co/z4VzNoIHnw</a> <a href="https://twitter.com/hashtag/breathing?src=hash&amp;ref_src=twsrc%5Etfw">#breathing</a> <a href="https://twitter.com/hashtag/health?src=hash&amp;ref_src=twsrc%5Etfw">#health</a> <a href="https://twitter.com/hashtag/pneumonia?src=hash&amp;ref_src=twsrc%5Etfw">#pneumonia</a> <a href="https://twitter.com/hashtag/surgery?src=hash&amp;ref_src=twsrc%5Etfw">#surgery</a> <a href="https://t.co/BXz4Ubrqtx">pic.twitter.com/BXz4Ubrqtx</a></p>&mdash; BMJ (@bmj_company) <a href="https://twitter.com/bmj_company/status/956308222071230464?ref_src=twsrc%5Etfw">January 24, 2018</a></blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Substantial inequalities in caesarean births persist in many countries, finds a study published in <a href="https://twitter.com/bmj_latest?ref_src=twsrc%5Etfw">@bmj_latest</a>    <a href="https://t.co/HFXr11qzFo">https://t.co/HFXr11qzFo</a>  <a href="https://twitter.com/hashtag/caesarean?src=hash&amp;ref_src=twsrc%5Etfw">#caesarean</a> <a href="https://twitter.com/hashtag/birth?src=hash&amp;ref_src=twsrc%5Etfw">#birth</a> <a href="https://twitter.com/hashtag/pregnancy?src=hash&amp;ref_src=twsrc%5Etfw">#pregnancy</a> <a href="https://t.co/iiVtQio5vJ">pic.twitter.com/iiVtQio5vJ</a></p>&mdash; BMJ (@bmj_company) <a href="https://twitter.com/bmj_company/status/956308223237206016?ref_src=twsrc%5Etfw">January 24, 2018</a></blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                    </div>
+              </div>
+          </div>
+      </div>  
+
+        <div class="col-sm-5">
+
+          <div class="row desktop-only">
+              <div class="col-sm-12 article-feed-container containers">
+                  <h2>Article Feed: Clinical</h2>
+                  <div class="content">
+                    <div class="article-list">
+                        <p>Articles from The BMJ and the BMJJs, Learning, Best Practice. Are there other sources? Is there a max number of articles displayed?</p>
+                        <ul>
+                        <li>Article title<br>Article date<br>Article provenance</li>
+                        <li>Article title<br>Article date<br>Article provenance</li>
+                        <li>Article title<br>Article date<br>Article provenance</li>
+                        <li>Article title<br>Article date<br>Article provenance</li>
+                        <li>Article title<br>Article date<br>Article provenance</li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row desktop-only">
+              <div class="col-sm-12 article-video-container containers">
+                  <h2>Podcast</h2>
+                  <div class="content">
+                        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/340703718&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                    </div>
+                </div>
+          </div>
+          <div class="row desktop-only">
               <div class="col-sm-12 article-twitter-container containers">
                   <h2>Other content recommended for you:</h2>
                   <div class="content">
@@ -187,8 +371,8 @@
 
 <!-- SEARCH BOX STYLES
 ========================================-->
-       <div class="col-sm-4">
-          <div class="row">
+       <div class="col-sm-2">
+          <div class="row desktop-only">
               <div class="col-lg-12 search sidebar">
                 <form name="searchForm" action="/search" method="get" class="">
                   <fieldset>
@@ -203,7 +387,7 @@
 
 <!-- LOGIN BOX STYLES
 ========================================-->
-          <div class="row">
+          <div class="row desktop-only">
               <div class="col-lg-12 updates containers sidebar">
                 <form class="form-signin">
                   <h2 class="form-signin-heading">Get the latest updates, etc</h2>
@@ -219,7 +403,7 @@
 
 <!-- LOGIN BOX STYLES
 ========================================-->
-          <div class="row">
+          <div class="row desktop-only">
               <div class="col-sm-12 mpu-banner sidebar">
                 <div class="image-placeholder">Image</div>
             </div>
@@ -228,7 +412,7 @@
 
 <!-- CARDIOLOGY JOBS
 ========================================-->
-          <div class="row">
+          <div class="row desktop-only">
               <div class="col-sm-12 containers cardiology sidebar">
                   <h2>Diabetics Jobs</h2>
                   <div class="content">
@@ -239,21 +423,21 @@
 
 <!-- MARKETING AREA
   ========================================-->
-        <div class="row">
+        <div class="row desktop-only">
               <div class="col-sm-12 containers marketing sidebar">
                   <h2>Marketing Area</h2>
                   <div class="content">
                     <p>Business needs to be able to enter the title and text</p>
                     </div>
               </div>
-          </div>
+        </div>
 
       </div><!-- END OF 3rd COLUMN --> 
     </div><!-- END OF ROW -->             
 
 <!-- BOTTOM BANNER
 ========================================-->
-        <div class="row">
+        <div class="row desktop-only">
           <div class="col-lg-12">
             <div class="jumbotron bottom-banner">
                 <h2>Banners: 728x90 or 970x250</h2>

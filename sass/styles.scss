@@ -69,7 +69,7 @@ hr {
 }
 .containers {
 	padding: 4px;
-	margin: 10px 10px 0;
+	margin: 10px 10px 0 0;
 	max-width: 90%;
 }
 .content {
@@ -83,17 +83,27 @@ hr {
 	padding: 5px;
 }
 .top-banner {
-	width:970px;
+	max-width:970px;
 	height: 250px;
 	margin: 20px auto;
 	text-align: center;
 }
 .bottom-banner {
-	width: 728px;
+	max-width: 728px;
 	height: 90px;
 	text-align: center;
 	padding: 20px 0 0 0;
 }
+.twitter-plugin {
+	background-color: $gray-light;
+	width: 320px;
+	height: 100px;
+	margin: 20px auto 0;
+	text-align: center;
+	padding-top: 35px;
+}
+.mobile-only{display: none}
+.desktop-only{display: block}
 .image-placeholder {
 	background-color: $gray-light;
 	min-height: 150px;
@@ -165,6 +175,7 @@ hr {
 	padding-top: 15px;
 	p {
 		font-size: 19px;
+		padding:0 0 0 10px;
 	}
 	.icon-bmj-logo:before{
 		color: $black;
@@ -186,10 +197,10 @@ hr {
 }
 .article-video-container, .article-twitter-container {
 	min-height: 287px!important;
-	max-height: 470px;
+	max-height: 548px;
 	overflow: hidden;
 	.content{
-		height:500px;
+		max-height:500px;
 	}
 }
 .sidebar{
@@ -222,8 +233,6 @@ hr {
 	padding-top: 17%;
 	max-width: 300px;
 	height: 250px;
-	position: relative;
-	left: 10px;
 }
 .col-lg-12.mpu-banner {
 	padding-left: 0!important
@@ -244,7 +253,7 @@ hr {
 .search {
 	border: 1px solid $black;	
     padding: 4px;
-    margin: 10px 10px 0;
+    margin: 10px 10px 0 0;
 
 	form {
 		fieldset .search-contain {
@@ -367,7 +376,12 @@ hr {
 	content: '\e806';
 }
 @media (max-width: 768px) {
+	.containers, .sponsor-banner, .search {margin:10px;}
 	.containers {max-width: 100%!important}
 	.social-media-icons {padding: 0;float: none}
-	.updates{ width: 100%!important}
+	.search {max-width: auto;}
+	.sidebar{max-width: 100%!important;}
+	.mobile-only{display: block}
+	.desktop-only{display: none}
+	.carousel-inner{max-height: 265px;}
 }

@@ -9232,7 +9232,7 @@ hr {
 /* line 70, ../sass/styles.scss */
 .containers {
   padding: 4px;
-  margin: 10px 10px 0;
+  margin: 10px 10px 0 0;
   max-width: 90%;
 }
 
@@ -9250,7 +9250,7 @@ hr {
 
 /* line 85, ../sass/styles.scss */
 .top-banner {
-  width: 970px;
+  max-width: 970px;
   height: 250px;
   margin: 20px auto;
   text-align: center;
@@ -9258,13 +9258,33 @@ hr {
 
 /* line 91, ../sass/styles.scss */
 .bottom-banner {
-  width: 728px;
+  max-width: 728px;
   height: 90px;
   text-align: center;
   padding: 20px 0 0 0;
 }
 
 /* line 97, ../sass/styles.scss */
+.twitter-plugin {
+  background-color: #eeeeee;
+  width: 320px;
+  height: 100px;
+  margin: 20px auto 0;
+  text-align: center;
+  padding-top: 35px;
+}
+
+/* line 105, ../sass/styles.scss */
+.mobile-only {
+  display: none;
+}
+
+/* line 106, ../sass/styles.scss */
+.desktop-only {
+  display: block;
+}
+
+/* line 107, ../sass/styles.scss */
 .image-placeholder {
   background-color: #eeeeee;
   min-height: 150px;
@@ -9274,12 +9294,12 @@ hr {
   padding-top: 22%;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .carousel {
   position: relative;
 }
 
-/* line 109, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .album {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -9287,11 +9307,11 @@ hr {
   min-height: auto !important;
   margin: 10px 0;
 }
-/* line 115, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .album .container {
   width: 90%;
 }
-/* line 118, ../sass/styles.scss */
+/* line 128, ../sass/styles.scss */
 .album .card {
   width: 100% !important;
   float: left;
@@ -9301,43 +9321,43 @@ hr {
   border: 0;
   background-color: #ffffff;
 }
-/* line 126, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .album .card > img {
   margin-bottom: .75rem;
 }
-/* line 130, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 .album .card img {
   max-height: 141px;
 }
 
-/* line 137, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .jumbotron {
   background-color: #eeeeee;
   font-size: 36px;
   color: #000000;
   margin: 50px auto;
 }
-/* line 142, ../sass/styles.scss */
+/* line 152, ../sass/styles.scss */
 .jumbotron p {
   font-size: 19px !important;
 }
-/* line 145, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 .jumbotron h1, .jumbotron p, .jumbotron h2 {
   color: #000000;
   border: none;
 }
-/* line 149, ../sass/styles.scss */
+/* line 159, ../sass/styles.scss */
 .jumbotron h1 {
   font-size: 36px;
   border: none;
 }
-/* line 153, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 .jumbotron .icon-bmj-logo:before {
   color: #000000;
   float: right;
 }
 
-/* line 158, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 .sponsor-banner {
   background-color: #ffffff;
   border: 1px solid #000000;
@@ -9347,115 +9367,114 @@ hr {
   min-height: 60px;
   padding-top: 15px;
 }
-/* line 166, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 .sponsor-banner p {
   font-size: 19px;
+  padding: 0 0 0 10px;
 }
-/* line 169, ../sass/styles.scss */
+/* line 180, ../sass/styles.scss */
 .sponsor-banner .icon-bmj-logo:before {
   color: #000000;
   float: right;
 }
 
-/* line 175, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .article-feed-container {
   max-height: 300px;
 }
-/* line 177, ../sass/styles.scss */
+/* line 188, ../sass/styles.scss */
 .article-feed-container ul {
   padding: 0;
   margin: 0;
 }
-/* line 181, ../sass/styles.scss */
+/* line 192, ../sass/styles.scss */
 .article-feed-container ul li {
   list-style-type: none;
   padding: 5px 0;
 }
 
-/* line 187, ../sass/styles.scss */
+/* line 198, ../sass/styles.scss */
 .article-video-container, .article-twitter-container {
   min-height: 287px !important;
-  max-height: 470px;
+  max-height: 548px;
   overflow: hidden;
 }
-/* line 191, ../sass/styles.scss */
+/* line 202, ../sass/styles.scss */
 .article-video-container .content, .article-twitter-container .content {
-  height: 500px;
+  max-height: 500px;
 }
 
-/* line 195, ../sass/styles.scss */
+/* line 206, ../sass/styles.scss */
 .sidebar {
   max-width: 300px !important;
   padding-right: 0;
 }
 
-/* line 199, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .updates {
   padding: 10px 15px;
   min-height: 1px;
   border: 1px solid #000000;
 }
-/* line 204, ../sass/styles.scss */
+/* line 215, ../sass/styles.scss */
 .updates h2 {
   background-color: #fff;
   color: #000000;
   padding: 0;
   border: none;
 }
-/* line 210, ../sass/styles.scss */
+/* line 221, ../sass/styles.scss */
 .updates .form-control {
   margin: 5px 0;
 }
-/* line 213, ../sass/styles.scss */
+/* line 224, ../sass/styles.scss */
 .updates .btn-primary:hover {
   box-shadow: 1px 1px 3px #000000;
 }
 
-/* line 217, ../sass/styles.scss */
+/* line 228, ../sass/styles.scss */
 .btn-primary {
   background-color: #a7a7a7;
   border-color: #a7a7a7;
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 232, ../sass/styles.scss */
 .mpu-banner .image-placeholder {
   padding-top: 17%;
   max-width: 300px;
   height: 250px;
-  position: relative;
-  left: 10px;
 }
 
-/* line 228, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 .col-lg-12.mpu-banner {
   padding-left: 0 !important;
 }
 
-/* line 231, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
 .col-lg-12.mpu-banner img {
   max-width: 94% !important;
 }
 
-/* line 235, ../sass/styles.scss */
+/* line 244, ../sass/styles.scss */
 .mpu-banner, .cardiology, .marketing {
   margin-top: 10px;
   padding: 0;
 }
 
-/* line 239, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 .cardiology, .marketing {
   height: 300px;
 }
 
 /* search box styles 
 ===============================*/
-/* line 244, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 .search {
   border: 1px solid #000000;
   padding: 4px;
-  margin: 10px 10px 0;
+  margin: 10px 10px 0 0;
 }
-/* line 251, ../sass/styles.scss */
+/* line 260, ../sass/styles.scss */
 .search form fieldset .search-contain input[type="text"] {
   margin: 10px 0;
   padding: 5px;
@@ -9467,7 +9486,7 @@ hr {
   top: 0 !important;
   width: 90%;
 }
-/* line 262, ../sass/styles.scss */
+/* line 271, ../sass/styles.scss */
 .search form fieldset .search-contain button[type="submit"] {
   background: #fff;
   border-left: none;
@@ -9479,20 +9498,20 @@ hr {
   display: inline-block;
   top: 0 !important;
 }
-/* line 272, ../sass/styles.scss */
+/* line 281, ../sass/styles.scss */
 .search form fieldset .search-contain button[type="submit"] .search-icon {
   font-size: 1.25rem;
 }
-/* line 275, ../sass/styles.scss */
+/* line 284, ../sass/styles.scss */
 .search form fieldset .search-contain button[type="submit"] .icon-search:before {
   content: '\e806';
 }
-/* line 279, ../sass/styles.scss */
+/* line 288, ../sass/styles.scss */
 .search form fieldset .search-contain::-webkit-input-placeholder {
   color: #000000;
 }
 
-/* line 288, ../sass/styles.scss */
+/* line 297, ../sass/styles.scss */
 .glyphicon-chevron-right {
   background: url("../images/glyphicons-224-chevron-right.png") 0 0 no-repeat;
   height: 22px;
@@ -9501,12 +9520,12 @@ hr {
   top: 40%;
   right: -25px;
 }
-/* line 295, ../sass/styles.scss */
+/* line 304, ../sass/styles.scss */
 .glyphicon-chevron-right:before {
   content: none !important;
 }
 
-/* line 297, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 .glyphicon-chevron-left {
   background: url("../images/glyphicons-225-chevron-left.png") 0 0 no-repeat;
   height: 22px;
@@ -9515,30 +9534,30 @@ hr {
   top: 40%;
   left: -25px;
 }
-/* line 304, ../sass/styles.scss */
+/* line 313, ../sass/styles.scss */
 .glyphicon-chevron-left:before {
   content: none !important;
 }
 
-/* line 306, ../sass/styles.scss */
+/* line 315, ../sass/styles.scss */
 .icon-bmj-logo:before {
   content: '\e804';
   font-size: 25px;
 }
 
-/* line 310, ../sass/styles.scss */
+/* line 319, ../sass/styles.scss */
 .social-media-icons {
   display: inline-block;
   float: right;
   margin: 5px 0 0 0;
 }
-/* line 315, ../sass/styles.scss */
+/* line 324, ../sass/styles.scss */
 .social-media-icons .icon-bmj-logo {
   border-right: 1px solid #ddd;
   color: #a7a7a7;
   padding-right: 25px;
 }
-/* line 320, ../sass/styles.scss */
+/* line 329, ../sass/styles.scss */
 .social-media-icons li {
   display: inline-block;
   color: #a7a7a7;
@@ -9547,7 +9566,7 @@ hr {
   cursor: pointer;
 }
 
-/* line 328, ../sass/styles.scss */
+/* line 337, ../sass/styles.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "fontello";
@@ -9563,61 +9582,86 @@ hr {
   /*line-height: 1em;*/
 }
 
-/* line 342, ../sass/styles.scss */
+/* line 351, ../sass/styles.scss */
 .icon-facebook-1:before {
   content: '\e800';
 }
 
 /* '' */
-/* line 346, ../sass/styles.scss */
+/* line 355, ../sass/styles.scss */
 .icon-twitter-1:before {
   content: '\e801';
 }
 
 /* '' */
-/* line 350, ../sass/styles.scss */
+/* line 359, ../sass/styles.scss */
 .icon-gplus:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 354, ../sass/styles.scss */
+/* line 363, ../sass/styles.scss */
 .icon-linkedin:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 358, ../sass/styles.scss */
+/* line 367, ../sass/styles.scss */
 .icon-bmj-logo:before {
   content: '\e804';
 }
 
 /* '' */
-/* line 362, ../sass/styles.scss */
+/* line 371, ../sass/styles.scss */
 .icon-youtube:before {
   content: '\e805';
 }
 
 /* '' */
-/* line 366, ../sass/styles.scss */
+/* line 375, ../sass/styles.scss */
 .icon-search:before {
   content: '\e806';
 }
 
 @media (max-width: 768px) {
-  /* line 370, ../sass/styles.scss */
+  /* line 379, ../sass/styles.scss */
+  .containers, .sponsor-banner, .search {
+    margin: 10px;
+  }
+
+  /* line 380, ../sass/styles.scss */
   .containers {
     max-width: 100% !important;
   }
 
-  /* line 371, ../sass/styles.scss */
+  /* line 381, ../sass/styles.scss */
   .social-media-icons {
     padding: 0;
     float: none;
   }
 
-  /* line 372, ../sass/styles.scss */
-  .updates {
-    width: 100% !important;
+  /* line 382, ../sass/styles.scss */
+  .search {
+    max-width: auto;
+  }
+
+  /* line 383, ../sass/styles.scss */
+  .sidebar {
+    max-width: 100% !important;
+  }
+
+  /* line 384, ../sass/styles.scss */
+  .mobile-only {
+    display: block;
+  }
+
+  /* line 385, ../sass/styles.scss */
+  .desktop-only {
+    display: none;
+  }
+
+  /* line 386, ../sass/styles.scss */
+  .carousel-inner {
+    max-height: 265px;
   }
 }
